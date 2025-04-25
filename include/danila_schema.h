@@ -1,0 +1,1 @@
+// Placeholder content for include/danila_schema.h

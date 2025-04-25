@@ -1,0 +1,1 @@
+// Placeholder content for aws/lambda-entry.cpp

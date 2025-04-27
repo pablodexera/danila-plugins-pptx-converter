@@ -12,10 +12,10 @@ jobs:
 
     env:
       AWS_REGION: us-east-1
-      ECR_REPOSITORY: danila-converter
-      ECS_CLUSTER: danila-cluster
-      ECS_SERVICE: danila-converter-service
-      CONTAINER_NAME: danila-converter
+      ECR_REPOSITORY: danila-plugins-pptx-converter
+      ECS_CLUSTER: danila-convert-pptx-dev-cluster
+      ECS_SERVICE: danila-convert-pptx-dev-service
+      CONTAINER_NAME: convert-pptx
 
     steps:
       - name: Checkout code

@@ -7,7 +7,7 @@ int main() {
     // Health check route
     CROW_ROUTE(app, "/").methods("GET"_method)([](){
         crow::response res(200, "Danila Convert-PPTX API is healthy.");
-        res.add_header("Access-Control-Allow-Origin", "*"); // TEMPORARY - replace later with "https://chat.danila.ai"
+        res.add_header("Access-Control-Allow-Origin", "https://chat.danila.ai");
         res.add_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
         res.add_header("Access-Control-Allow-Headers", "Content-Type");
         return res;
@@ -16,7 +16,7 @@ int main() {
     // Preflight CORS handler for /convert-pptx
     CROW_ROUTE(app, "/convert-pptx").methods("OPTIONS"_method)([](){
         crow::response res(204); // No Content
-        res.add_header("Access-Control-Allow-Origin", "*"); // TEMPORARY - replace later with "https://chat.danila.ai"
+        res.add_header("Access-Control-Allow-Origin", "https://chat.danila.ai");
         res.add_header("Access-Control-Allow-Methods", "POST, OPTIONS");
         res.add_header("Access-Control-Allow-Headers", "Content-Type");
         return res;
@@ -34,7 +34,7 @@ int main() {
         std::string resultJson = "{\"presentation\": {\"slides\": []}}";
 
         crow::response res(200, resultJson);
-        res.add_header("Access-Control-Allow-Origin", "*"); // TEMPORARY - replace later with "https://chat.danila.ai"
+        res.add_header("Access-Control-Allow-Origin", "https://chat.danila.ai");
         res.add_header("Access-Control-Allow-Methods", "POST, OPTIONS");
         res.add_header("Access-Control-Allow-Headers", "Content-Type");
         return res;

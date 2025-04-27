@@ -11,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      AWS_REGION: us-east-1
-      ECR_REPOSITORY: danila-plugins-pptx-converter
-      ECS_CLUSTER: danila-dev-cluster
-      ECS_SERVICE: danila-convert-pptx-dev-service
-      CONTAINER_NAME: convert-pptx
+    AWS_REGION: us-east-1
+    ECR_REPOSITORY: convert-pptx
+    ECS_CLUSTER: danila-dev-cluster
+    ECS_SERVICE: danila-convert-pptx-dev-service
+    CONTAINER_NAME: convert-pptx
 
     steps:
       - name: Checkout code

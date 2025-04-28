@@ -16,6 +16,7 @@ jobs:
       ECS_CLUSTER: danila-dev-cluster
       ECS_SERVICE: danila-convert-pptx-dev-service
       CONTAINER_NAME: convert-pptx
+      ENVIRONMENT: production 
 
     steps:
       - name: Checkout code
